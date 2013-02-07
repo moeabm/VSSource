@@ -64,6 +64,7 @@
 copy "$(TargetDir)"client.dll "c:\program files (x86)\steam\steamapps\SourceMods\vampireslayersource\bin"
 </Command>
       <Outputs>c:\program files (x86)\steam\steamapps\SourceMods\vampireslayersource\bin\client.dll;%(Outputs)</Outputs>
+      <Inputs>$(TargetPath)</Inputs>
     </CustomBuildStep>
     <ClCompile>
       <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
@@ -144,6 +145,7 @@ if exist "c:\program files (x86)\steam\steamapps\SourceMods\vampireslayersource\
 if exist "$(TargetDir)"client.pdb copy "$(TargetDir)"client.pdb "c:\program files (x86)\steam\steamapps\SourceMods\vampireslayersource\bin\client.pdb"
 </Command>
       <Outputs>c:\program files (x86)\steam\steamapps\SourceMods\vampireslayersource\bin\client.dll;c:\program files (x86)\steam\steamapps\SourceMods\vampireslayersource\bin\client.pdb;%(Outputs)</Outputs>
+      <Inputs>$(TargetPath)</Inputs>
     </CustomBuildStep>
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
