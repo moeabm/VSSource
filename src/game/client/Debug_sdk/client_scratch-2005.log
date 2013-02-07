@@ -1,0 +1,26 @@
+﻿Build started 2/6/2013 7:53:56 PM.
+     1>Project "F:\VS Source\src\game\client\client_scratch-2005.vcxproj" on node 3 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating ".\Debug_sdk\Client SDK.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+         All outputs are up-to-date.
+         All outputs are up-to-date.
+       Link:
+         All outputs are up-to-date.
+         client_scratch-2005.vcxproj -> F:\VS Source\src\game\client\.\Debug_sdk\client.dll
+       CustomBuildStep:
+         Description: Copying to c:\program files (x86)\steam\steamapps\SourceMods\vampireslayersource\bin\
+         if exist "c:\program files (x86)\steam\steamapps\SourceMods\vampireslayersource\bin\client.dll" attrib -r "c:\program files (x86)\steam\steamapps\SourceMods\vampireslayersource\bin\client.dll"
+         copy "F:\VS Source\src\game\client\Debug_sdk\"client.dll "c:\program files (x86)\steam\steamapps\SourceMods\vampireslayersource\bin"
+         
+         :VCEnd
+                 1 file(s) copied.
+       FinalizeBuildStatus:
+         Deleting file ".\Debug_sdk\Client SDK.unsuccessfulbuild".
+         Touching ".\Debug_sdk\Client SDK.lastbuildstate".
+     1>Done Building Project "F:\VS Source\src\game\client\client_scratch-2005.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.80
