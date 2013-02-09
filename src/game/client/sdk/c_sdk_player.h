@@ -47,6 +47,12 @@ public:
 
 	// Have this player play the sounds from his view model's reload animation.
 	void PlayReloadEffect();
+	
+	//AMoore; Invisible handling 
+	bool isInvisible;
+	float invStart;
+	float invEnd;
+	virtual void GoInvisible( float);
 
 // Called by shared code.
 public:

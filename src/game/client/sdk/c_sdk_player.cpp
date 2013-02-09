@@ -834,6 +834,8 @@ void C_SDKPlayer::ClientThink()
 	Vector vForward;
 	AngleVectors( GetLocalAngles(), &vForward );
 
+	
+
 	for( int iClient = 1; iClient <= gpGlobals->maxClients; ++iClient )
 	{
 		CBaseEntity *pEnt = UTIL_PlayerByIndex( iClient );
@@ -868,12 +870,38 @@ void C_SDKPlayer::ClientThink()
 
 	UpdateIDTarget();
 
+
+	
+	if(isInvisible){
+		float iAlpha;
+		if(invEnd < gpGlobals->curtime){
+			GetViewModel()->SetRenderColorA(255);
+			GetViewModel()->SetRenderMode( kRenderNormal );
+			isInvisible = false;
+		}
+		else if (gpGlobals->curtime-invStart > 0){
+			
+			iAlpha = min((gpGlobals->curtime-invStart),0.8f)/ 0.8f; 
+			GetViewModel()->SetRenderMode( kRenderTransAlpha );
+			GetViewModel()->SetRenderColorA(255- 200.0f * iAlpha);
+		}
+	}
+
 	// Avoidance
 	if ( gpGlobals->curtime >= m_fNextThinkPushAway )
 	{
 		PerformObstaclePushaway( this );
 		m_fNextThinkPushAway =  gpGlobals->curtime + PUSHAWAY_THINK_INTERVAL;
 	}
+}
+
+//-----------------------------------------------------------------------------
+// Purpose: sets parameters to go invisible for 'length' of time
+//-----------------------------------------------------------------------------
+void C_SDKPlayer::GoInvisible(float length){
+	isInvisible = true;
+	invStart = gpGlobals->curtime;
+	invEnd = invStart + length;
 }
 
 //-----------------------------------------------------------------------------

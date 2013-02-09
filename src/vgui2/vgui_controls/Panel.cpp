@@ -3129,7 +3129,7 @@ bool Panel::RequestFocusNext(VPANEL panel)
 void Panel::RequestFocus(int direction)
 {
 	// NOTE: This doesn't make any sense if we don't have keyboard input enabled
-	Assert( IsX360() || IsKeyBoardInputEnabled() );
+	//Assert( IsX360() || IsKeyBoardInputEnabled() );
 //	ivgui()->DPrintf2("RequestFocus(%s, %s)\n", GetName(), GetClassName());
 	OnRequestFocus(GetVPanel(), NULL);
 }

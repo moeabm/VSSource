@@ -782,7 +782,7 @@ bool CSDKGameMovement::CheckJumpButton( void )
 	Assert( sv_gravity.GetFloat() == 800.0f );
 
 	float flJumpHeight = 268.3281572999747f;
-	Warning("HERE team: %d", player->GetTeamNumber());
+	//Warning("HERE team: %d", player->GetTeamNumber());
 	// Accelerate upward
 	// If we are ducking...
 	float startz = mv->m_vecVelocity[2];
@@ -797,7 +797,7 @@ bool CSDKGameMovement::CheckJumpButton( void )
 							
 		
 		if(player->GetTeamNumber() == 2){
-			mv->m_vecVelocity[2] = flGroundFactor * flJumpHeight * 1.2;  
+			mv->m_vecVelocity[2] = flGroundFactor * flJumpHeight ;  
 			//mv->m_vecVelocity[1] *= 1.8; 
 			//mv->m_vecVelocity[0] *= 1.8;  
 			Vector vecForward;

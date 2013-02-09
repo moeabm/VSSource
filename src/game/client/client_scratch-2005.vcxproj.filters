@@ -1416,6 +1416,9 @@
     <ClCompile Include="toolframework_client.cpp">
       <Filter>Tool Framework</Filter>
     </ClCompile>
+    <ClCompile Include="..\shared\sdk\weapon_claws1.cpp">
+      <Filter>Source Files\SDK\Weapons</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="achievement_notification_panel.h">

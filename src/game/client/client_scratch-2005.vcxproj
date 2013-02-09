@@ -217,6 +217,7 @@ if exist "$(TargetDir)"client.pdb copy "$(TargetDir)"client.pdb "c:\program file
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\shared\sdk\weapon_claws1.cpp" />
     <ClCompile Include="achievement_notification_panel.cpp" />
     <ClCompile Include="..\shared\achievement_saverestore.cpp" />
     <ClCompile Include="..\shared\achievementmgr.cpp" />

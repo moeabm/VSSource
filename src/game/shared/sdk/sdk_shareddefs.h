@@ -149,6 +149,7 @@ typedef enum
 	SDK_WEAPON_GRENADE,
 	SDK_WEAPON_PISTOL,
 	SDK_WEAPON_CROWBAR,
+	SDK_WEAPON_CLAWS1,
 
 	
 	WEAPON_MAX,		// number of weapons weapon index

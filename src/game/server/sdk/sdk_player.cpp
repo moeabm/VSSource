@@ -278,6 +278,19 @@ void CSDKPlayer::PostThink()
 {
 	BaseClass::PostThink();
 
+	if(isInvisible){
+		float iAlpha;
+		if(invEnd < gpGlobals->curtime){
+			SetRenderMode( kRenderNormal );
+			isInvisible = false;
+		}
+		else {
+			iAlpha = min((gpGlobals->curtime-invStart),0.8f)/ 0.8f; 
+			SetRenderMode( kRenderTransAlpha );
+			SetRenderColorA(255- 200.0f * iAlpha);
+		}
+	}
+
 	QAngle angles = GetLocalAngles();
 	angles[PITCH] = 0;
 	SetLocalAngles( angles );
@@ -323,6 +336,12 @@ void CSDKPlayer::GiveDefaultItems()
 #endif
 }
 #define SDK_PUSHAWAY_THINK_CONTEXT	"SDKPushawayThink"
+
+void CSDKPlayer::GoInvisible(float length){
+	isInvisible = true;
+	invStart = gpGlobals->curtime;
+	invEnd = invStart + length;
+}
 void CSDKPlayer::SDKPushawayThink(void)
 {
 	// Push physics props out of our way.

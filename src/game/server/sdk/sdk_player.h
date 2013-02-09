@@ -57,6 +57,9 @@ public:
 
 	virtual void GiveDefaultItems();
 
+	
+	virtual void GoInvisible( float);
+
 	// Animstate handles this.
 	void SetAnimation( PLAYER_ANIM playerAnim ) { return; }
 
@@ -185,6 +188,11 @@ private:
 	void ShowClassSelectMenu();
 	bool m_bIsClassMenuOpen;
 #endif
+	
+	//AMoore; Invisible handling 
+	bool isInvisible;
+	float invStart;
+	float invEnd;
 
 #if defined ( SDK_USE_PRONE )
 	void InitProne( void );

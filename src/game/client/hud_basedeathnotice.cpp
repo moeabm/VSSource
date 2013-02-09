@@ -350,14 +350,14 @@ void CHudBaseDeathNotice::FireGameEvent( IGameEvent *event )
 		{
 			Q_snprintf( sDeathMsg, sizeof( sDeathMsg ), "%s killed %s", m_DeathNotices[iMsg].Killer.szName, m_DeathNotices[iMsg].Victim.szName );
 
-			if ( killedwithweaponlog && killedwithweaponlog[0] && ( killedwithweaponlog[0] > 13 ) )
-			{
-				Q_strncat( sDeathMsg, VarArgs( " with %s.", killedwithweaponlog ), sizeof( sDeathMsg ), COPY_ALL_CHARACTERS );
-			}
-			else if ( m_DeathNotices[iMsg].szIcon[0] && ( m_DeathNotices[iMsg].szIcon[0] > 13 ) )
-			{
-				Q_strncat( sDeathMsg, VarArgs( " with %s.", &m_DeathNotices[iMsg].szIcon[2] ), sizeof( sDeathMsg ), COPY_ALL_CHARACTERS );
-			}
+			//if ( killedwithweaponlog && killedwithweaponlog[0] && ( killedwithweaponlog[0] > 13 ) )
+			//{
+			//	Q_strncat( sDeathMsg, VarArgs( " with %s.", killedwithweaponlog ), sizeof( sDeathMsg ), COPY_ALL_CHARACTERS );
+			//}
+			//else if ( m_DeathNotices[iMsg].szIcon[0] && ( m_DeathNotices[iMsg].szIcon[0] > 13 ) )
+			//{
+			//	Q_strncat( sDeathMsg, VarArgs( " with %s.", &m_DeathNotices[iMsg].szIcon[2] ), sizeof( sDeathMsg ), COPY_ALL_CHARACTERS );
+			//}
 		}
 
 		Msg( "%s\n", sDeathMsg );

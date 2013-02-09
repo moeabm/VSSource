@@ -9,5 +9,6 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LocalDebuggerWorkingDirectory>C:\Program Files (x86)\Steam\steamapps\moeabm\source sdk base</LocalDebuggerWorkingDirectory>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <ShowAllFiles>false</ShowAllFiles>
   </PropertyGroup>
 </Project>
